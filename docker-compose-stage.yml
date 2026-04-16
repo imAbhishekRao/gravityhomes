@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  gravityhomes_stage:
+    build: .
+    container_name: gravityhomes_stage
+    restart: always
+    entrypoint: ["sh", "-c", "npm start"]
+    ports:
+      - "127.0.0.1:3020:3000"
